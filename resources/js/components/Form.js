@@ -63,7 +63,7 @@ const Form = ({ products, categories, store }) => {
             data.name !== "" &&
             data.description !== "" &&
             (data.price !== 0 || isNumber(data.price)) &&
-            (data.category_id !== 0 || data.category_id !== null)
+            (parseFloat(data.category_id) !== 0)
         ) {
             console.log("no error");
             const storeReturn = await store(data);

@@ -6090,7 +6090,7 @@ var Form = function Form(_ref) {
                 setErrorCategoryId("Please select a category");
               }
 
-              if (!(data.name !== "" && data.description !== "" && (data.price !== 0 || isNumber(data.price)) && (data.category_id !== 0 || data.category_id !== null))) {
+              if (!(data.name !== "" && data.description !== "" && (data.price !== 0 || isNumber(data.price)) && parseFloat(data.category_id) !== 0)) {
                 _context.next = 16;
                 break;
               }
